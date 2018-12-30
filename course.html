@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./img/logo.ico" type="image/x-icon">
+    <title>课程展示</title>
+    <link rel="stylesheet" href="./src/general.css">
+    <style>
+        .head {
+            width: 100%;
+            height: 110px;
+            background-color: #222;
+            position: fixed;
+        }
+
+        .ico {
+            position: relative;
+            vertical-align: top;
+            margin-left: 381px;
+            margin-top: 34px;
+            display: inline-block;
+            height: 42px;
+            width: 38px;
+            background-image: url("./img/logo.png");
+        }
+
+        .nav {
+            margin-right: 110px;
+            float: right;
+            display: inline-block;
+            height: 38px;
+            line-height: 0px;
+        }
+
+        .bt {
+            height: 104px;
+            line-height: 104px;
+            position: relative;
+        }
+
+        .navbtn {
+            cursor: pointer;
+            text-align: center;
+            opacity: 0;
+            left: 16px;
+            top: 28px;
+            z-index: 10;
+            position: fixed;
+            display: inline-block;
+            height: 42px;
+            width: 42px;
+            line-height: 46px;
+            background-color: #fff;
+            border-radius: 42px;
+        }
+
+        .line {
+            height: 0px;
+            border: 1px solid #111;
+            margin-top: 5px;
+        }
+
+        .navbtn_w {
+            display: inline-block;
+            width: 25px;
+        }
+
+        /* ============================================ */
+        .foot_top {
+            text-align: center;
+            font-family: "STXihei";
+            font-size: 12px;
+            color: #fff;
+            height: 418px;
+            background-color: #222;
+        }
+
+        .foot_buttom {
+            height: 85px;
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            line-height: 85px;
+        }
+
+        .intro {
+
+            margin-top: 132px;
+            display: inline-block;
+        }
+
+        .list {
+            margin-left: 184px;
+            margin-top: 132px;
+            vertical-align: top;
+            display: inline-block;
+        }
+
+        .list .btn {
+            cursor: pointer;
+            margin-top: 24px;
+        }
+
+        .QR_code {
+            margin-left: 147px;
+            margin-top: 132px;
+            text-align: center;
+            vertical-align: top;
+            display: inline-block;
+        }
+
+        .QR_code div {
+            display: inline-block;
+        }
+
+        .QR_code div div {
+            display: block;
+        }
+
+        .QR_code img {
+            margin-bottom: 28px;
+        }
+
+        /* ============================================================== */
+        .textShow {
+            text-align: center;
+        }
+
+        .textShow_title {
+            font-family: 'MicrosoftYaHeiLight';
+            color: #222;
+            font-size: 60px;
+        }
+
+        .textShow_little {
+            font-family: 'MicrosoftYaHeiLight';
+            color: #666;
+            font-size: 20px;
+        }
+
+        /* ================================================ */
+        .courser {
+            text-align: center;
+        }
+
+        .courser_title {
+            font-family: 'MicrosoftYaHeiLight';
+            color: #222;
+            font-size: 40px;
+        }
+
+        .courser_little {
+            font-family: 'STXihei';
+            color: #666;
+            font-size: 20px;
+        }
+
+        .courser_dash {
+            height: 0px;
+            width: 300px;
+            display: inline-block;
+            border: 1px #c5c5c5 dashed;
+        }
+
+        .courser_card {
+            cursor: url('./img/courser/小手.png');
+            vertical-align: top;
+            margin-top: 20px;
+            padding: 22px 22px;
+            display: inline-block;
+        }
+
+        .courser_card:hover {
+
+            box-shadow: 0px 0px 20px 0px;
+        }
+
+        .courser_card img {
+            width: 485px;
+            height: 273px;
+        }
+
+        .courser_card_title {
+            display: inline-block;
+            margin-top: 26px;
+            font-family: 'STXihei';
+            color: #222;
+            font-size: 22px;
+        }
+
+        .courser_card_text {
+            width: 485px;
+            display: inline-block;
+            margin-top: 20px;
+            font-family: 'STXihei';
+            color: #666;
+            font-size: 17px;
+        }
+
+        .courser_card_bar {
+            margin-top: 66px;
+            text-align: left;
+            height: 26px;
+        }
+
+        .courser_btn {
+            float: right;
+            cursor: pointer;
+            font-family: 'STXihei';
+            color: #fff;
+            font-size: 17px;
+            height: 22px;
+            padding: 6px 12px;
+            background-color: #88e888;
+            border-radius: 100px;
+        }
+
+        .courser_bar {
+            left: -100px;
+            position: relative;
+            text-align: left;
+            width: 5390px;
+            height: 580px;
+        }
+
+        .courser_show {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        /* ======================================================== */
+        .black {
+            text-align: center;
+            margin-top: 179px;
+            height: 334px;
+            background-image: url('./img/jesse-gardner-40008.png');
+        }
+
+        .black_little {
+            font-family: 'STXihei';
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .black_little1 {
+            font-family: 'MicrosoftYaHeiLight';
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .black_title {
+            font-family: 'MicrosoftYaHeiLight';
+            color: #fff;
+            font-size: 36px;
+        }
+
+        /* =============================================== */
+        .topic {
+            text-align: center;
+        }
+
+        .topic_title {
+            font-family: 'MicrosoftYaHeiLight';
+            color: #222;
+            font-size: 40px;
+        }
+
+        .topic_little {
+            font-family: 'STXihei';
+            color: #666;
+            font-size: 20px;
+        }
+
+        .topic_card {
+            padding: 22px;
+            display: inline-block;
+            width: 470px;
+            height: 550px;
+        }
+
+        .topic_show {
+            height: 650px;
+            overflow: hidden;
+        }
+
+        .topic_card:hover {
+            box-shadow: 0px 0px 20px 0px;
+        }
+
+        .topic_card img {
+            height: 430px;
+            width: 470px;
+        }
+
+        .topic_name {
+            float: left;
+            font-family: 'MicrosoftYaHei';
+            color: #222;
+            font-size: 22px;
+        }
+
+        .topic_text {
+            font-family: 'STXihei';
+            color: #666;
+            font-size: 17px;
+        }
+
+        .topic_card_bar {
+            width: 100%;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .topic_star {
+            float: right;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-image: url('./img/x1.png');
+        }
+
+        .topic_star.one {
+            background-image: url('./img/x2.png');
+        }
+
+        .topic_star.half {
+            background-image: url('./img/x3.png');
+        }
+
+        .topic_bar {
+            left: -100px;
+            position: relative;
+            width: 2600px;
+        }
+
+        /* ======================================================================= */
+        .contact {
+            text-align: center;
+        }
+
+        .contact_title {
+            font-family: 'MicrosoftYaHeiLight';
+            color: #222;
+            font-size: 40px;
+        }
+
+        .contact_little {
+            font-family: 'STXihei';
+            color: #222;
+            font-size: 20px;
+        }
+
+        .contact_card {
+            margin: 0px 55px;
+            display: inline-block;
+        }
+
+        .contact_wrapper {
+
+            font-family: 'STXihei';
+            color: #666;
+            font-size: 16px;
+            display: inline-block;
+            width: 300px;
+            height: 540px;
+            background-color: #f4f4f4;
+        }
+
+        .contact_name {
+            font-family: 'STXihei';
+            color: #222;
+            font-size: 20px;
+        }
+        .contact_onlie{
+            outline: none;
+            text-decoration: none;
+            font-family: 'STXihei';
+            color: #666;
+            font-size: 16px;
+            border: 1px #666 solid;
+            border-radius: 100px;
+            padding: 5px 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="navbtn">
+        <span class="navbtn_w">
+
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </span>
+    </span>
+    <div class="head">
+
+        <span class="ico"></span>
+        <div class="nav">
+            <span class="DUYI_chooseButton_underline bt">首页</span>
+            <span class="DUYI_chooseButton_underline bt">课程学习</span>
+            <span class="DUYI_chooseButton_underline bt">学员展示</span>
+            <span class="DUYI_chooseButton_underline bt">关于</span>
+        </div>
+
+    </div>
+    <!-- ======================================================================== -->
+
+    <div class="textShow">
+        <div style="height:202px;"></div>
+        <span class="textShow_title">从0到1的蜕变</span>
+        <div style="height:26px;"></div>
+        <span class="textShow_little">在渡一，你只需要4个月的时间，我们承诺：达不到一线城市10w+年薪，全额退款</span>
+    </div>
+
+
+
+    <div class="courser">
+        <div style="height:130px;"></div>
+        <span class="courser_title">web前端课程</span>
+        <div style="height:27px;"></div>
+        <span class="courser_dash"></span>
+        <div style="height:22px;"></div>
+        <span class="courser_little">The&nbsp;front&nbsp;course</span>
+        <div style="height:68px;"></div>
+        <div class="courser_show">
+            <div class="courser_bar">
+
+                <div class="courser_card">
+                    <img src="./img/courser/1.png" alt="">
+                    <div></div>
+                    <span class="courser_card_title">001【Web前端开发高级工程师就业班第五期】</span>
+                    <div></div>
+                    <span class="courser_card_text">腾讯平台史上，最全面，最权威的Web前端就业课程</span>
+                    <div></div>
+                    <div class="courser_card_bar">
+                        <span class="courser_teacher"></span>
+                        <span class="courser_btn">付费学习</span>
+                    </div>
+                </div>
+                <div class="courser_card">
+                    <img src="./img/courser/2.png" alt="">
+                    <div></div>
+                    <span class="courser_card_title">01【Web前端开发高级工程师进阶班第五期】</span>
+                    <div></div>
+                    <span class="courser_card_text">互联网大牛的求学之路</span>
+                    <div></div>
+                    <div class="courser_card_bar">
+                        <span class="courser_teacher"></span>
+                        <span class="courser_btn">付费学习</span>
+                    </div>
+                </div>
+                <div class="courser_card">
+                    <img src="./img/courser/3.png" alt="">
+                    <div></div>
+                    <span class="courser_card_title">1【Web前端开发之Javascript精英课堂】</span>
+                    <div></div>
+                    <span class="courser_card_text">一个把JavaScript已经当作母语的人在这里发表一下内心的想法....</span>
+                    <div></div>
+                    <div class="courser_card_bar">
+                        <span class="courser_teacher"></span>
+                        <span class="courser_btn">免费学习</span>
+                    </div>
+                </div>
+                <div class="courser_card">
+                    <img src="./img/courser/4.jpg" alt="">
+                    <div></div>
+                    <span class="courser_card_title">2【Web前端开发之HTML+CSS精英课堂】</span>
+                    <div></div>
+                    <span class="courser_card_text">0基础不需要学历，课程由浅入深！阿里巴巴高级工程师亲授，保证你能做出任何你看到过的静态网页</span>
+                    <div></div>
+                    <div class="courser_card_bar">
+                        <span class="courser_teacher"></span>
+                        <span class="courser_btn">免费学习</span>
+                    </div>
+                </div>
+                <div class="courser_card">
+                    <img src="./img/courser/5.png" alt="">
+                    <div></div>
+                    <span class="courser_card_title">3【IT行业职业发展之路】</span>
+                    <div></div>
+                    <span class="courser_card_text">人生不只有技术，还要有技巧和选择，这套课程，将为你排清迷雾，指点迷津！ 为你规划一个璀璨的职业生涯之路。</span>
+                    <div></div>
+                    <div class="courser_card_bar">
+                        <span class="courser_teacher"></span>
+                        <span class="courser_btn">免费学习</span>
+                    </div>
+                </div>
+                <div class="courser_card">
+                    <img src="./img/courser/6.png" alt="">
+                    <div></div>
+                    <span class="courser_card_title">4【淘宝商城项目课】</span>
+                    <div></div>
+                    <span class="courser_card_text">淘宝商城项目实战开发</span>
+                    <div></div>
+                    <div class="courser_card_bar">
+                        <span class="courser_teacher"></span>
+                        <span class="courser_btn">免费学习</span>
+                    </div>
+                </div>
+                <div class="courser_card">
+                    <img src="./img/courser/7.png" alt="">
+                    <div></div>
+                    <span class="courser_card_title">5【原生JS扫雷游戏实战开发】</span>
+                    <div></div>
+                    <span class="courser_card_text">运用原生JS，完成扫雷游戏实战开发</span>
+                    <div></div>
+                    <div class="courser_card_bar">
+                        <span class="courser_teacher"></span>
+                        <span class="courser_btn">免费学习</span>
+                    </div>
+                </div>
+                <div class="courser_card">
+                    <img src="./img/courser/8.png" alt="">
+                    <div></div>
+                    <span class="courser_card_title">6【原生JS贪吃蛇游戏实战开发】</span>
+                    <div></div>
+                    <span class="courser_card_text">运用原生JS，完成贪吃蛇游戏实战开发</span>
+                    <div></div>
+                    <div class="courser_card_bar">
+                        <span class="courser_teacher"></span>
+                        <span class="courser_btn">免费学习</span>
+                    </div>
+                </div>
+                <div class="courser_card">
+                    <img src="./img/courser/9.png" alt="">
+                    <div></div>
+                    <span class="courser_card_title">7【主流实战框架之了不起的VUE】</span>
+                    <div></div>
+                    <span class="courser_card_text">主流实战框架之了不起的VUE</span>
+                    <div></div>
+                    <div class="courser_card_bar">
+                        <span class="courser_teacher"></span>
+                        <span class="courser_btn">免费学习</span>
+                    </div>
+                </div>
+                <div class="courser_card">
+                    <img src="./img/courser/10.png" alt="">
+                    <div></div>
+                    <span class="courser_card_title">8【你不知道的JavaScript】</span>
+                    <div></div>
+                    <span class="courser_card_text">你不知道的JavaScript</span>
+                    <div></div>
+                    <div class="courser_card_bar">
+                        <span class="courser_teacher"></span>
+                        <span class="courser_btn">免费学习</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="black">
+        <div style="height:123px;"></div>
+        <span class="black_little">COMING&nbsp;SOON</span>
+        <div style="height:13px;"></div>
+        <span class="black_little1">更用心的筹备&nbsp;只为了让你学到更优质的课程</span>
+        <div style="height:14px;"></div>
+        <span class="black_title">JAVA课程</span>
+    </div>
+
+
+
+
+    <div class="topic">
+        <div style="height:124px;"></div>
+        <span class="topic_title">基础测试题</span>
+        <div style="height:37px;"></div>
+        <span class="courser_dash"></span>
+        <div style="height:25px;"></div>
+        <span class="topic_little">Drag for more</span>
+        <div style="height:117px;"></div>
+        <div class="topic_show">
+            <div style="height:37px;"></div>
+            <div class="topic_bar">
+                <div class="topic_card">
+                    <img src="./img/topic/T1.png" alt="">
+                    <div style="height:38px;"></div>
+                    <span class="topic_name">【渡一教育&nbsp;入学必测】</span>
+                    <div style="height:48px;"></div>
+                    <div class="topic_card_bar">
+                        <span class="topic_text"> 知己知彼，百战不殆</span>
+
+                        <span class="topic_star one"></span>
+                        <span class="topic_star one"></span>
+                        <span class="topic_star"></span>
+                        <span class="topic_star"></span>
+                    </div>
+                </div>
+                <div class="topic_card">
+                    <img src="./img/topic/T2.png" alt="">
+                    <div style="height:38px;"></div>
+                    <span class="topic_name">【就业班学习&nbsp;基础测试（上）】</span>
+                    <div style="height:48px;"></div>
+                    <div class="topic_card_bar">
+                        <span class="topic_text">测试你对于公益课知识点的掌握情况</span>
+
+                        <span class="topic_star one"></span>
+                        <span class="topic_star one"></span>
+                        <span class="topic_star half"></span>
+                        <span class="topic_star"></span>
+                    </div>
+                </div>
+                <div class="topic_card">
+                    <img src="./img/topic/T3.png" alt="">
+                    <div style="height:38px;"></div>
+                    <span class="topic_name">【就业班学习&nbsp;基础测试（下）】</span>
+                    <div style="height:48px;"></div>
+                    <div class="topic_card_bar">
+                        <span class="topic_text"> 测试你对于公益课知识点的掌握情况</span>
+
+                        <span class="topic_star one"></span>
+                        <span class="topic_star one"></span>
+                        <span class="topic_star"></span>
+                        <span class="topic_star"></span>
+                    </div>
+                </div>
+                <div class="topic_card">
+                    <img src="./img/topic/T4.png" alt="">
+                    <div style="height:38px;"></div>
+                    <span class="topic_name">【就业班课程--基础知识点测试】</span>
+                    <div style="height:48px;"></div>
+                    <div class="topic_card_bar">
+                        <span class="topic_text"> 测试你是否需要报名学习就业班课程</span>
+
+                        <span class="topic_star one"></span>
+                        <span class="topic_star one"></span>
+                        <span class="topic_star one"></span>
+                        <span class="topic_star"></span>
+                    </div>
+                </div>
+                <div class="topic_card">
+                    <img src="./img/topic/T5.png" alt="">
+                    <div style="height:38px;"></div>
+                    <span class="topic_name">【进阶班课程---基础知识点测试】</span>
+                    <div style="height:48px;"></div>
+                    <div class="topic_card_bar">
+                        <span class="topic_text"> 测试你是否需要报名学习进阶班课程</span>
+
+                        <span class="topic_star one"></span>
+                        <span class="topic_star one"></span>
+                        <span class="topic_star one"></span>
+                        <span class="topic_star half"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="height:38px;"></div>
+    </div>
+
+
+
+    <div class="contact">
+        <div style="height:207px;"></div>
+        <span class="contact_title">任何疑问，请联系我们</span>
+        <div style="height:28px;"></div>
+        <span class="contact_little">Counseling&nbsp;courses</span>
+        <div style="height:87px;"></div>
+        <div class="contact_card">
+            <div class="contact_wrapper">
+                <div style="height:96px;"></div>
+                <img src="./img/wechat.png" alt="" class="contact_ico">
+                <div style="height:40px;"></div>
+                <img src="./img/小渡微信二维码.png" alt="">
+                <div style="height:65px;"></div>
+                <span class="contact_text">帮你量身定制课程<br>掌握高薪技术</span>
+            </div>
+            <div style="height:38px;"></div>
+            <span class="contact_name">WeChat</span>
+        </div>
+
+        <div class="contact_card">
+            <div class="contact_wrapper">
+                <div style="height:96px;"></div>
+                <img src="./img/phone.png" alt="" class="contact_ico">
+                <div style="height:96px;"></div>
+                <span class="contact_text" style="font-size:20px;">400-678-6077</span>
+                <div style="height:125px;"></div>
+                <span class="contact_text">倾听你的需求<br>帮你成为更好的自己</span>
+            </div>
+            <div style="height:38px;"></div>
+            <span class="contact_name">Phone</span>
+        </div>
+
+        <div class="contact_card">
+            <div class="contact_wrapper">
+                <div style="height:96px;"></div>
+                <img src="./img/online.png" alt="" class="contact_ico">
+                <div style="height:96px;"></div>
+                <a href="" class="contact_onlie">在线咨询</a>
+                <div style="height:130px;"></div>
+                <span class="contact_text">来听听老师怎么说</span>
+            </div>
+            <div style="height:38px;"></div>
+            <span class="contact_name">Online</span>
+        </div>
+    </div>
+
+    <div style="height:115px;"></div>
+
+
+    <!-- ====================================================================== -->
+    <div class="foot">
+        <div class="foot_top">
+            <div class="intro">
+                <div>DUYI&nbsp;CULTURE</div>
+                <div style="margin-top:31px;">育人为渡，经久如一<br> 我们不会辜负时代赋予我们的历史性机遇，为构建技术
+                    <br> 互联网的超科技时代，一往无前。在渡一，愿我们拥有
+                    <br> 更多可能，也期待你们脚下有风，各自灿烂。
+                </div>
+            </div>
+
+            <div class="list">
+                <div class="btn" style="margin-top:0px;">CATEGORIES</div>
+                <div class="btn">About</div>
+                <div class="btn">Forum</div>
+                <div class="btn">Service</div>
+                <div class="btn">Porlfolio</div>
+                <div class="btn">Contact</div>
+            </div>
+
+            <div class="QR_code">
+                <div>
+                    <img src="./img/公众号二维码.png" alt="">
+                    <div></div>
+                    <span>渡一官方公众号</span>
+                </div>
+                <div style="margin-left:95px;">
+                    <img src="./img/小渡微信二维码.png" alt="">
+                    <div></div>
+                    <span>小渡智能咨询</span>
+                </div>
+            </div>
+        </div>
+        <div class="foot_buttom">Copyright&nbsp;2018&nbsp;DUYI&nbsp;EDUCATION&nbsp;Version&nbsp;1.0.0</div>
+    </div>
+
+    <script src="./src/general.js"></script>
+
+
+
+
+    <script>
+        var courser = { bar: document.getElementsByClassName('courser_bar')[0], now: -100 }
+        var imgs = document.getElementsByTagName('img');
+        for (var i = 0; i < imgs.length; i++) {
+            imgs[i].ondragstart = function () { return false; };
+        }
+        courser.bar.onmousedown = function (e) {
+            var start = e.screenX;
+            courser.bar.onmousemove = function (e1) {
+                if ((courser.now < 0 && (start - e1.screenX) < 0) || (courser.bar.offsetWidth + courser.now > document.body.offsetWidth && (start - e1.screenX) >= 0)) {
+                    courser.now = courser.now - (start - e1.screenX);
+                    courser.bar.style.left = courser.now + 'px';
+                    start = e1.screenX;
+                }
+            }
+            courser.bar.onmouseup = function (e1) {
+                courser.bar.onmousemove = function () { }
+            }
+        }
+        courser.bar.onwheel = function (e) {
+            if ((courser.now < 0 && (e.deltaX) < 0) || (courser.bar.offsetWidth + courser.now > document.body.offsetWidth && (e.deltaX) >= 0)) {
+                courser.now = courser.now - (e.deltaX);
+                courser.bar.style.left = courser.now + 'px';
+            }
+        }
+
+        var topic = { bar: document.getElementsByClassName('topic_bar')[0], now: -100 }
+        topic.bar.onmousedown = function (e) {
+            var start = e.screenX;
+            topic.bar.onmousemove = function (e1) {
+                if ((topic.now < 0 && (start - e1.screenX) < 0) || (topic.bar.offsetWidth + topic.now > document.body.offsetWidth && (start - e1.screenX) >= 0)) {
+                    topic.now = topic.now - (start - e1.screenX);
+                    topic.bar.style.left = topic.now + 'px';
+                    start = e1.screenX;
+                }
+            }
+            topic.bar.onmouseup = function (e1) {
+                topic.bar.onmousemove = function () { }
+            }
+        }
+        topic.bar.onwheel = function (e) {
+            if ((topic.now < 0 && (e.deltaX) < 0) || (topic.bar.offsetWidth + topic.now > document.body.offsetWidth && (e.deltaX) >= 0)) {
+                topic.now = topic.now - (e.deltaX);
+                topic.bar.style.left = topic.now + 'px';
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

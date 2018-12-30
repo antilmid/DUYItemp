@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./img/logo.ico" type="image/x-icon">
+    <title>DUYI首页</title>
+    <link rel="stylesheet" href="./src/general.css">
+    <!-- 临时样式开始============================= -->
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        .head {
+            z-index: 5;
+            width: 100%;
+            height: 110px;
+            background-color: #222;
+            position: fixed;
+        }
+        .ico {
+            position: relative;
+            vertical-align: top;
+            margin-left: 381px;
+            margin-top: 34px;
+            display: inline-block;
+            height: 42px;
+            width: 38px;
+            background-image: url("./img/logo.png");
+        }
+
+        .nav {
+            margin-right: 110px;
+            float: right;
+            display: inline-block;
+            height: 38px;
+            line-height: 0px;
+        }
+
+        .bt {
+            height: 104px;
+            line-height: 104px;
+            position: relative;
+        }
+
+        .navbtn {
+            cursor: pointer;
+            text-align: center;
+            opacity: 0;
+            left: 16px;
+            top: 28px;
+            z-index: 10;
+            position: fixed;
+            display: inline-block;
+            height: 42px;
+            width: 42px;
+            line-height: 46px;
+            background-color: #fff;
+            border-radius: 42px;
+        }
+
+        .line {
+            height: 0px;
+            border: 1px solid #111;
+            margin-top: 5px;
+        }
+
+        .navbtn_w {
+            display: inline-block;
+            width: 25px;
+        }
+
+        /* ============================================ */
+        .foot_top {
+            text-align: center;
+            font-family: "STXihei";
+            font-size: 12px;
+            color: #fff;
+            height: 418px;
+            background-color: #222;
+        }
+
+        .foot_buttom {
+            height: 85px;
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            line-height: 85px;
+        }
+
+        .intro {
+            margin-top: 132px;
+            display: inline-block;
+        }
+
+        .list {
+            margin-left: 184px;
+            margin-top: 132px;
+            vertical-align: top;
+            display: inline-block;
+        }
+
+        .list .btn {
+            cursor: pointer;
+            margin-top: 24px;
+        }
+
+        .QR_code {
+            margin-left: 147px;
+            margin-top: 132px;
+            text-align: center;
+            vertical-align: top;
+            display: inline-block;
+        }
+
+        .QR_code div {
+            display: inline-block;
+        }
+
+        .QR_code div div {
+            display: block;
+        }
+
+        .QR_code img {
+            margin-bottom: 28px;
+        }
+
+        /* 轮播图样式表========================= */
+        .picshow {
+            position: relative;
+            height: 790px;
+            width: 100%;
+        }
+        .picshow a{
+            position: relative;
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+        }
+        .picshow a img{
+            transition: all 1s;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            height: 790px;
+            width: 100%;
+        }
+
+        .point {
+            top: 95%;
+            left: 50%;
+            margin-left: -27px;
+            position: absolute;
+
+        }
+
+        .point .pointbtn {
+            cursor: pointer;
+            height: 8px;
+            width: 8px;
+            display: inline-block;
+            background-color: #fff;
+            border: 1px #ccc solid;
+            border-radius: 8px;
+            margin: 0px 5px;
+        }
+
+        .point .pointbtn.active {
+            background-color: #be926f;
+        }
+
+        .picshow .banner_bar {
+            top: 50%;
+            height: 31px;
+            margin-top: -8px;
+            width: 100%;
+            position: absolute;
+        }
+
+        .picshow .banner_bar .left {
+            float: left;
+            margin-left: 42px;
+            display: inline-block;
+            background-image: url(./img/left.png);
+            width: 17px;
+            height: 31px;
+            cursor: pointer;
+        }
+
+        .picshow .banner_bar .right {
+            float: right;
+            margin-right: 42px;
+            display: inline-block;
+            background-image: url(./img/right.png);
+            width: 17px;
+            height: 31px;
+            cursor: pointer;
+        }
+
+        /* 优秀学员样式表================================= */
+        .greatstudent {
+            text-align: center;
+            position: relative;
+        }
+        .greatstudent_show{
+            position: relative;
+        }
+        .greatstudent_channel{
+            position: absolute;
+            height: 604px;
+            transition: all 1s;
+            z-index: -1;
+            top:0px;
+            width: 100%;
+            text-align: center;
+        }
+        .lines {
+            top: 95%;
+            left: 50%;
+            margin-left: -120px;
+            position: absolute;
+
+        }
+
+        .lines .linebtn {
+            cursor: pointer;
+            height: 2px;
+            width: 60px;
+            display: inline-block;
+            background-color: #ccc;
+            margin: 0px 15px;
+        }
+
+        .lines .linebtn.active {
+            background-color: #222;
+        }
+
+        .studentpic {
+            margin: 0px 35px;
+        }
+
+        /* 腾讯认证样式======================================== */
+        .tencent {
+            text-align: center;
+            height: 1000px;
+            background-color: #222;
+        }
+
+        .tencent_title {
+            font-family: 'MicrosoftYaHeiLight';
+            font-size: 72px;
+            color: #fff;
+        }
+
+        .tencent_little {
+            margin-top: 23px;
+            margin-left: 305px;
+            font-family: 'STXihei';
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .tencent_title .color_yellow {
+            color: #f4ca38;
+        }
+
+        .culum {
+            display: inline-block;
+            position: relative;
+            margin-top: 420px;
+        }
+
+        .tencent .background {
+            top: -65px;
+            left: 200px;
+            z-index: 3;
+            display: inline-block;
+            background-image: url("./img/认证框.png");
+            width: 295px;
+            height: 223px;
+            position: absolute;
+        }
+
+        .tencent_content {
+            font-size: 18px;
+            margin-top: 112px;
+            font-family: 'MicrosoftYaHei';
+            color: #fffefe;
+        }
+
+        .culum1 {
+            display: inline-block;
+            margin-top: 157px;
+            vertical-align: top;
+            margin-left: 100px;
+
+        }
+
+        .culum1 img {
+
+            height: 688px;
+            width: 550px;
+        }
+
+        /* 一线老师样式================================================= */
+        .teacher {
+            text-align: center;
+        }
+
+        .teacher_title {
+            font-family: 'MicrosoftYaHeiLight';
+            font-size: 40px;
+            color: #222;
+        }
+
+        .teacher_little {
+            font-family: 'MicrosoftYaHeiLight';
+            font-size: 20px;
+            color: #666;
+        }
+
+        .teacher_show {
+            margin: 0px 12px;
+            text-align: left;
+            vertical-align: top;
+            font-family: 'MicrosoftYaHeiLight';
+            display: inline-block;
+            width: 290px;
+        }
+
+        .teacher_pic {
+            position: relative;
+        }
+
+        .teacher .teacher_pic span {
+            z-index: 2;
+            left: 21px;
+            top: -30px;
+            position: absolute;
+            width: 242px;
+            height: 335px;
+            display: inline-block;
+            border: 2px #ddd solid;
+        }
+
+        .teacher .teacher_pic img {
+            transition:all 1s;
+            width: 288px;
+            height: 346px;
+        }
+        .teacher .teacher_pic:hover img {
+            transition:all 1s;
+            transform: scale(1.1, 1.1) translateY(-31px);
+        }
+        .teacher .teacher_name {
+            margin-left: 12px;
+            margin-top: 32px;
+            vertical-align: bottom;
+            display: inline-block;
+            font-size: 22px;
+            color: #222;
+        }
+
+        .teacher .teacher_name2 {
+            margin-left: 12px;
+            display: inline-block;
+            vertical-align: bottom;
+            font-family: 'STXihei';
+            font-size: 14px;
+            color: #999;
+            margin-left: 12px;
+        }
+
+        .teacher .teacher_intro {
+            position: relative;
+            margin-left: 12px;
+            margin-top: 12px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .teacher .teacher_intro::before {
+            position: absolute;
+            content: ' ';
+            height: 100%;
+            width: 0px;
+            border: 1px #ccc solid;
+            left: -12px;
+            top: -18px;
+        }
+        /* 合作企业样式======================================= */
+        .partner{
+            text-align: center;
+        }
+        .partner .partner_title{
+            font-family: 'MicrosoftYaHeiLight';
+            font-size: 40px;
+            color: #222;
+        }
+        .partner .partner_litile{
+            font-family: 'STXihei';
+            font-size: 20px;
+            color: #666;
+        }
+        .partner .partner_li{
+            width: 290px;
+            display: inline-block;
+        }
+        .partner .partner_li .icon{
+            border-top: 2px #f5f5f5 solid;
+            height: 118px;
+            width: 290px;
+            display: inline-block;
+        }
+        .partner .partner_li .icon.on{
+            border-top:none;
+        }
+        .partner .pline {
+            display: inline-block;
+            width: 2px;
+            height: 472px;
+            background: #f5f5f5;
+        }
+        .partner .i1{
+            background-image: url('./img/logo/1.png');
+        }
+        .partner .i1:hover{
+            background-image: url('./img/logo灰白/1.png');
+        }
+        .partner .i2{
+            background-image: url('./img/logo/2.png');
+        }
+        .partner .i2:hover{
+            background-image: url('./img/logo灰白/2.png');
+        }
+        .partner .i3{
+            background-image: url('./img/logo/3.png');
+        }
+        .partner .i3:hover{
+            background-image: url('./img/logo灰白/3.png');
+        }
+        .partner .i4{
+            background-image: url('./img/logo/4.png');
+        }
+        .partner .i4:hover{
+            background-image: url('./img/logo灰白/4.png');
+        }
+        .partner .i5{
+            background-image: url('./img/logo/5.png');
+        }
+        .partner .i5:hover{
+            background-image: url('./img/logo灰白/5.png');
+        }
+        .partner .i6{
+            background-image: url('./img/logo/6.png');
+        }
+        .partner .i6:hover{
+            background-image: url('./img/logo灰白/6.png');
+        }
+        .partner .i7{
+            background-image: url('./img/logo/7.png');
+        }
+        .partner .i7:hover{
+            background-image: url('./img/logo灰白/7.png');
+        }
+        .partner .i8{
+            background-image: url('./img/logo/8.png');
+        }
+        .partner .i8:hover{
+            background-image: url('./img/logo灰白/8.png');
+        }
+        .partner .i9{
+            background-image: url('./img/logo/9.png');
+        }
+        .partner .i9:hover{
+            background-image: url('./img/logo灰白/9.png');
+        }
+        .partner .i10{
+            background-image: url('./img/logo/10.png');
+        }
+        .partner .i10:hover{
+            background-image: url('./img/logo灰白/10.png');
+        }
+        .partner .i11{
+            background-image: url('./img/logo/11.png');
+        }
+        .partner .i11:hover{
+            background-image: url('./img/logo灰白/11.png');
+        }
+        .partner .i12{
+            background-image: url('./img/logo/12.png');
+        }
+        .partner .i12:hover{
+            background-image: url('./img/logo灰白/12.png');
+        }
+        .partner .i13{
+            background-image: url('./img/logo/13.png');
+        }
+        .partner .i13:hover{
+            background-image: url('./img/logo灰白/13.png');
+        }
+        .partner .i14{
+            background-image: url('./img/logo/14.png');
+        }
+        .partner .i14:hover{
+            background-image: url('./img/logo灰白/14.png');
+        }
+        .partner .i15{
+            background-image: url('./img/logo/15.png');
+        }
+        .partner .i15:hover{
+            background-image: url('./img/logo灰白/15.png');
+        }
+        .partner .i16{
+            background-image: url('./img/logo/16.png');
+        }
+        .partner .i16:hover{
+            background-image: url('./img/logo灰白/16.png');
+        }
+    </style>
+</head>
+
+<body>
+    <span class="navbtn">
+        <span class="navbtn_w">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </span>
+    </span>
+    <div class="head">
+
+        <span class="ico"></span>
+        <div class="nav" style="">
+            <span class="DUYI_chooseButton_underline bt">首页</span>
+            <span class="DUYI_chooseButton_underline bt">课程学习</span>
+            <span class="DUYI_chooseButton_underline bt">学员展示</span>
+            <span class="DUYI_chooseButton_underline bt">关于</span>
+        </div>
+
+    </div>
+    <!-- ====================================================================================== -->
+    <!-- 文档中凡是出现div没有内容，单独有一个style设置高度，那么它就是用来充当  换行 + margin-top的 -->
+    <div style="height:110px"></div>
+
+    <!-- 轮播图模块 -->
+    <div class="picshow">
+        <a href="https://ke.qq.com/course/231577?tuin=3a8c9fe2" target="_blank">
+            <img src="" alt="" class="pics">
+            <img src="" alt="" class="pics">
+        </a>
+        <div class="banner_bar">
+            <span class="left" id="banner_left"></span>
+            <span class="right" id="banner_right"></span>
+        </div>
+        <div class="point">
+            <span class="pointbtn active"></span>
+            <span class="pointbtn"></span>
+            <span class="pointbtn"></span>
+        </div>
+    </div>
+
+    <!-- 优秀学生模块 -->
+    <div class="greatstudent">
+        <div class="greatstudent_wrapper">
+                <div style="height:128px;"></div>
+                <span style="font-family:'MicrosoftYaHeiLight'; font-size:40px; color:#222;">优秀学员俱乐部</span>
+                <div style="height:20px;"></div>
+                <span>部分25-45W年薪学员</span>
+                <div style="height:96px;"></div>
+                
+                <div class="greatstudent_show">
+                        <div class="greatstudent_channel">
+                                <img src="" alt="" class="studentpic">
+                                <img src="" alt="" class="studentpic">
+                                <img src="" alt="" class="studentpic">
+                                <img src="" alt="" class="studentpic">
+                                <div style="height:56px;"></div>
+                                <img src="" alt="" class="studentpic">
+                                <img src="" alt="" class="studentpic">
+                                <img src="" alt="" class="studentpic">
+                                <img src="" alt="" class="studentpic">
+                                <div style="height:56px;"></div>
+                                <img src="" alt="" class="studentpic">
+                                <img src="" alt="" class="studentpic">
+                                <img src="" alt="" class="studentpic">
+                                <img src="" alt="" class="studentpic">
+                        </div>
+                        <div class="greatstudent_channel">
+                                <img src="" alt="" class="studentpic">
+                                <img src="" alt="" class="studentpic">
+                                <img src="" alt="" class="studentpic">
+                                <img src="" alt="" class="studentpic">
+                                <div style="height:56px;"></div>
+                                <img src="" alt="" class="studentpic">
+                                <img src="" alt="" class="studentpic">
+                                <img src="" alt="" class="studentpic">
+                                <img src="" alt="" class="studentpic">
+                                <div style="height:56px;"></div>
+                                <img src="" alt="" class="studentpic">
+                                <img src="" alt="" class="studentpic">
+                                <img src="" alt="" class="studentpic">
+                                <img src="" alt="" class="studentpic">
+                        </div>
+                </div>
+
+                <div style="height:112px;"></div>
+                <div class="lines">
+                    <span class="linebtn active"></span>
+                    <span class="linebtn"></span>
+                    <span class="linebtn"></span>
+                </div>
+        </div>
+    </div>
+
+    <!-- 腾讯认证效果图模块 -->
+    <div class="tencent">
+        <div class="culum">
+            <div>
+                <span class="tencent_title">腾讯平台<span class="color_yellow">认证</span></span>
+                <div></div>
+                <span class="tencent_little">AUTHENTICATION</span>
+                <div class="tencent_content">为了能让更多的互联网技术爱好者学习到更顶尖的前端技术课<br> 程，渡一教育于2017年10月将独创的前端核心技术课程上传至
+                    <br> 腾讯课堂。一经上传，短短几个月的时间便成为平台中最受欢迎
+                    <br> 的前端课程之一，得到腾讯平台及线上学员的一致好评！2018
+                    <br> 年初，渡一教育已获得腾讯课堂官方认证机构。
+                </div>
+
+                <span class="background"></span>
+            </div>
+        </div>
+        <div class="culum1"><img src="./img/认证.png" alt=""></div>
+    </div>
+
+
+    <!-- 一线老师展示模块 -->
+    <div class="teacher">
+        <div style="height:130px;"></div>
+        <span class="teacher_title">业界名师&nbsp;卓尔不凡</span>
+        <div style="height:20px;"></div>
+        <span class="teacher_little">互联网一线大咖亲授&nbsp;祝你圆梦IT</span>
+        <div style="height:100px;"></div>
+        <div class="teacher_show">
+            <div class="teacher_pic">
+                <span></span>
+                <img src="./img/姬成2.png" alt="">
+            </div>
+            <div class="teacher_content">
+                <div class="teacher_name">姬成</div>
+                <div class="teacher_name2">Charlie&nbsp;Ji</div>
+                <div class="teacher_intro">现任渡一信息技术开发有限公司CEO、托特教育科技有限公司CEO，北京丰立鼎盛投资有限公司投资顾问，iTutor Group商务顾问，原阿里巴巴UC移动事业群购物搜索项目负责人，兼任多所高校校企联合生涯规划师，曾累计在各高校开展100余场生涯规划讲座，累计培养数百名国际一线互联网精英。</div>
+            </div>
+        </div>
+        <div class="teacher_show">
+            <div class="teacher_pic">
+                <span></span>
+                <img src="./img/陈思彤.png" alt="">
+            </div>
+            <div class="teacher_content">
+                <div class="teacher_name">陈思彤</div>
+                <div class="teacher_name2">Sitong&nbsp;Chen</div>
+                <div class="teacher_intro">渡一教育特级讲师，现任渡一信息技术开发有限公司副经理，哈尔滨托特教育科技有限公司CTO， 原百度自然语言处理事业群 T6 级高级工程师，精通 Web 全栈、Java和
+                    C++等技术，对设计模式，框架源码有很深的理解！
+                </div>
+            </div>
+        </div>
+        <div class="teacher_show">
+            <div class="teacher_pic">
+                <span></span>
+                <img src="./img/常立峰.png" alt="">
+            </div>
+            <div class="teacher_content">
+                <div class="teacher_name">常立峰</div>
+                <div class="teacher_name2">Lifeng&nbsp;Chang</div>
+                <div class="teacher_intro">渡一教育高级讲师，美团商家广告推广部项目经理，美团 p7 工程师，原 58 赶集集团工程师，精通 web 全栈、数据库、C、 C++、Python、Android
+                    和 javaEE 等技术。深厚的编程功底，与项目经验为你的工作面试保驾护航。</div>
+            </div>
+        </div>
+        <div class="teacher_show">
+            <div class="teacher_pic">
+                <span></span>
+                <img src="./img/尹文松4.png" alt="">
+            </div>
+            <div class="teacher_content">
+                <div class="teacher_name">尹文松</div>
+                <div class="teacher_name2">Wensong&nbsp;Yin</div>
+                <div class="teacher_intro">渡一教育高级讲师，滴滴出行平台技术部高级前端工程师，深入研究javascript，掌握丰富的实战编程经验，对不断更新的前端技术有独到的见解。教学严谨，致力于成为最优秀的知识传播者。</div>
+            </div>
+        </div>
+        <div style="height:100px;"></div>
+        <div class="teacher_show">
+            <div class="teacher_pic">
+                <span></span>
+                <img src="./img/丁永志.png" alt="">
+            </div>
+            <div class="teacher_content">
+                <div class="teacher_name">丁永志</div>
+                <div class="teacher_name2">Yongzhi&nbsp;Ding</div>
+                <div class="teacher_intro">渡一教育高级讲师，搜狐产品技术部资深web前端工程师，搜狐首页前端项目负责人。从事Web开发多年，对各种Web开发技术（包括前端和后端）都有非常深入的研究，经验极其丰富.不仅对javascript理论知识有深入理解，此外，对node.js，vue.js，react.js，vuex，redux，Weex，mongo
+                    等方面积累了大量实战经验。
+                </div>
+            </div>
+        </div>
+        <div class="teacher_show">
+            <div class="teacher_pic">
+                <span></span>
+                <img src="./img/董美琪.png" alt="">
+            </div>
+            <div class="teacher_content">
+                <div class="teacher_name">董美琪</div>
+                <div class="teacher_name2">Meiqi&nbsp;Dong</div>
+                <div class="teacher_intro">渡一教育高级讲师 原滴滴出行基础平台部软件工程师,数据平台主要前端负责人，在职期间曾一个人肩负整个团队的前端开发工作，实战经验丰富，对底层javascript有深入的研究，熟悉前端自动化构建工具的应用，对vue，vuex，react
+                    redux等流行的技术有独特的见解，有自己的授课风格，责任心超强，立志打造中国顶尖前端学员。
+                </div>
+            </div>
+        </div>
+        <div class="teacher_show">
+            <div class="teacher_pic">
+                <span></span>
+                <img src="./img/薛楠.png" alt="">
+            </div>
+            <div class="teacher_content">
+                <div class="teacher_name">薛楠</div>
+                <div class="teacher_name2">Nan&nbsp;Xue</div>
+                <div class="teacher_intro">渡一教育高级讲师 从事web前端开发多年 曾在北京艺龙旅行网 指点通网络科技有限公司等互联网公司工作，自主带队开发多款大型项目，深入研究前端主流技术栈，潜心研究IT行业发展前景，理论基础扎实，实战经验丰富
+                    讲课幽默风趣
+                </div>
+            </div>
+        </div>
+        <div class="teacher_show">
+            <div class="teacher_pic">
+                <span></span>
+                <img src="./img/于宾.png" alt="">
+            </div>
+            <div class="teacher_content">
+                <div class="teacher_name">于宾</div>
+                <div class="teacher_name2">Bin&nbsp;Yu</div>
+                <div class="teacher_intro">渡一教育高级讲师，58赶集集团高级工程师，长期在一线互联网企业任职，对主流前端框架颇有造诣，科班出身对软件工程的认识更是技高一筹，身为讲师在掌握深入的技术的同时拥有幽默风趣的表达能力。</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 一堆合作企业模块 -->
+    <div class="partner">
+            <div style="height:91px;"></div>
+        <span class="partner_title">内推合作机构&nbsp;助力学员就业</span>
+        <div style="height:24px;"></div>
+        <span class="partner_litile">Cooperation&nbsp;enterprise</span>
+        <div style="height:32px;"></div>
+        <div class="partner_list">
+            <div class="partner_li">
+                <span class="icon i1 on"></span>
+                <span class="icon i2"></span>
+                <span class="icon i3"></span>
+                <span class="icon i4"></span>
+            </div><div class="pline"></div><div class="partner_li">
+                    <span class="icon i5 on"></span>
+                    <span class="icon i6"></span>
+                    <span class="icon i7"></span>
+                    <span class="icon i8"></span>
+            </div><div class="pline"></div><div class="partner_li">
+                    <span class="icon i9 on"></span>
+                    <span class="icon i10"></span>
+                    <span class="icon i11"></span>
+                    <span class="icon i12"></span>
+            </div><div class="pline"></div><div class="partner_li">
+                    <span class="icon i13 on"></span>
+                    <span class="icon i14"></span>
+                    <span class="icon i15"></span>
+                    <span class="icon i16"></span>
+            </div>
+            <div style="height:100px;"></div>
+        </div>
+    </div>
+
+
+
+
+    <!-- ====================================================================================== -->
+    <div class="foot">
+        <div class="foot_top">
+            <div class="intro">
+                <div>DUYI&nbsp;CULTURE</div>
+                <div style="margin-top:31px;">育人为渡，经久如一<br> 我们不会辜负时代赋予我们的历史性机遇，为构建技术
+                    <br> 互联网的超科技时代，一往无前。在渡一，愿我们拥有
+                    <br> 更多可能，也期待你们脚下有风，各自灿烂。
+                </div>
+            </div>
+
+            <div class="list">
+                <div class="btn" style="margin-top:0px;">CATEGORIES</div>
+                <div class="btn">About</div>
+                <div class="btn">Forum</div>
+                <div class="btn">Service</div>
+                <div class="btn">Porlfolio</div>
+                <div class="btn">Contact</div>
+            </div>
+
+            <div class="QR_code">
+                <div>
+                    <img src="./img/公众号二维码.png" alt="">
+                    <div></div>
+                    <span>渡一官方公众号</span>
+                </div>
+                <div style="margin-left:95px;">
+                    <img src="./img/小渡微信二维码.png" alt="">
+                    <div></div>
+                    <span>小渡智能咨询</span>
+                </div>
+            </div>
+        </div>
+        <div class="foot_buttom">Copyright&nbsp;2018&nbsp;DUYI&nbsp;EDUCATION&nbsp;Version&nbsp;1.0.0</div>
+    </div>
+
+    <script src="./src/general.js"></script>
+
+
+
+    <script>
+        /*
+            亲，注释的代码不是没用，是可能有用= =所有没删除
+            因为页面较少且相对独立，没有考虑过变量污染问题，解决污染最直接的办法：加一个立即执行的套子
+        */ 
+        //===========================
+        // 第一步：处理轮播图
+        // ==========================
+        var pic = { bannerTimer: 0, now: 1, img: document.getElementsByClassName('pics'), channel: 0, timer: [0, 0, 0], point: document.getElementsByClassName('pointbtn'),last:'./img/banner3.png' };
+        function showImg() {
+            var url = './img/banner' + pic.now + '.png';
+            var last = pic.now - 1;
+            if (last <= 0) {
+                last = 3;
+            }
+            // clearInterval(pic.timer[0]);
+            // clearInterval(pic.timer[1]);
+            pic.img[pic.channel].src = pic.last;
+            pic.img[pic.channel].style.opacity = 0;
+            // (function(){
+            //     var channel = pic.channel;
+            //     var i = 1;
+            //     pic.timer[0] = setInterval(function(){
+            //         pic.img[channel].style.opacity = i;
+            //         i-=0.02;
+            //         if(i < 0){
+            //             clearInterval(pic.timer[0]);
+            //         }
+            //     },5);
+            // })();
+            pic.channel ++;
+            pic.channel = pic.channel % 2;
+            pic.img[pic.channel].src = url;
+            pic.img[pic.channel].style.opacity = 1;
+            // (function(){
+            //     var channel = pic.channel;
+            //     var i = 0;
+            //     pic.timer[1] = setInterval(function(){
+            //         pic.img[channel].style.opacity = i;
+            //         i+=0.02;
+            //         if(i > 1){
+            //             clearInterval(pic.timer[1]);
+            //         }
+            //     },5);
+            // })();
+            pic.last = pic.img[pic.channel].src;
+            pic.point[pic.now - 1].className = 'pointbtn active';
+            pic.point[last - 1].className = 'pointbtn';
+        }
+        function bannner() {
+            clearInterval(pic.bannerTimer);
+            pic.bannerTimer = setInterval(function () {
+                showImg();
+                pic.now++;
+                if (pic.now == 4) {
+                    pic.now = 1;
+                }
+            }, 3000);
+        }
+        showImg();
+        pic.now++;
+        bannner();
+        // 绑定轮播图切换按钮事件
+        for (var i = 0; i < 3; i++) {
+            (function () {
+                var _i = i;
+                pic.point[_i].onclick = function () {
+                    function allrest () {
+                        for(var x = 0; x < 3; x++){
+                            pic.point[x].className = 'pointbtn';
+                        }
+                    }
+                    allrest();
+                    pic.now = _i + 1;
+                    showImg();
+                    pic.now++;
+                    if (pic.now == 4) {
+                        pic.now = 1;
+                    }
+                    bannner();
+                }
+            })();
+        }
+        // 绑定左右切换按钮事件
+        document.getElementById("banner_right").onclick = function () {
+            function allrest () {
+                        for(var x = 0; x < 3; x++){
+                            pic.point[x].className = 'pointbtn';
+                        }
+                    }
+                    allrest();
+            showImg();
+            pic.now++;
+            if (pic.now == 4) {
+                pic.now = 1;
+            }
+            bannner();
+        }
+        document.getElementById("banner_left").onclick = function () {
+            function allrest () {
+                        for(var x = 0; x < 3; x++){
+                            pic.point[x].className = 'pointbtn';
+                        }
+                    }
+                    allrest();
+            pic.now--;
+            if (pic.now == 0) {
+                pic.now = 3;
+            }
+            pic.now--;
+            if (pic.now == 0) {
+                pic.now = 3;
+            }
+            showImg();
+            pic.now++;
+            if (pic.now == 4) {
+                pic.now = 1;
+            }
+            bannner();
+        }
+
+
+
+        // ======================================
+        // 第二歩：学员展示操作
+        // ======================================
+
+        var student = { channel:0,now: 1, timer: 0, img: document.getElementsByClassName('greatstudent_channel'), btn: document.getElementsByClassName('linebtn'), father:document.getElementsByClassName('greatstudent')[0] };
+        // 这两货是缓冲用的
+        student.img[0].style.position = 'absolute';
+        student.img[1].style.position = 'absolute';
+        function showStudent() {
+            var i = 0;
+            var img = student.img[student.channel].getElementsByClassName('studentpic');
+            student.img[student.channel].style.position = 'absolute';
+            student.img[student.channel].style.opacity = '0';
+
+            student.channel = (student.channel + 1) % 2;
+            
+            img = student.img[student.channel].getElementsByClassName('studentpic');
+            student.img[student.channel].style.position = 'static';
+            student.img[student.channel].style.opacity = '1';
+            for (i = 0; i < 12; i++) {
+                img[i].src = './img/' + student.now + '/' + (i + 1) + '.png';
+            }
+            var last = student.now - 1;
+            if (last <= 0) {
+                last = 3;
+            }
+            student.btn[student.now - 1].className = 'linebtn active';
+            student.btn[last - 1].className = 'linebtn';
+        }
+        showStudent();
+        student.now++;
+        function studentpic() {
+            clearInterval(student.timer);
+            student.timer = setInterval(function () {
+                showStudent();
+                student.now++;
+                if (student.now == 4) {
+                    student.now = 1;
+                }
+            }, 5000);
+        }
+        studentpic();
+        // 绑定学员切换按钮
+        for (var i = 0; i < 3; i++) {
+            (function () {
+                var _i = i;
+                student.btn[_i].onclick = function () {
+                    student.now = _i + 1;
+                    function allrest () {
+                        for(var x = 0; x < 3; x++){
+                            student.btn[x].className = 'linebtn';
+                        }
+                    }
+                    allrest();
+                    showStudent();
+                    student.now++;
+                    if (student.now == 4) {
+                        student.now = 1;
+                    }
+                    studentpic();
+                }
+            })();
+        }
+
+
+    </script>
+</body>
+
+</html>

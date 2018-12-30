@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./img/logo.ico" type="image/x-icon">
+    <title>学员风采</title>
+    <link rel="stylesheet" href="./src/general.css">
+    <style>
+        .head {
+            width: 100%;
+            height: 110px;
+            background-color: #222;
+            position: fixed;
+        }
+
+        .ico {
+            position: relative;
+            vertical-align: top;
+            margin-left: 381px;
+            margin-top: 34px;
+            display: inline-block;
+            height: 42px;
+            width: 38px;
+            background-image: url("./img/logo.png");
+        }
+
+        .nav {
+            margin-right: 110px;
+            float: right;
+            display: inline-block;
+            height: 38px;
+            line-height: 0px;
+        }
+
+        .bt {
+            height: 104px;
+            line-height: 104px;
+            position: relative;
+        }
+
+        .navbtn {
+            cursor: pointer;
+            text-align: center;
+            opacity: 0;
+            left: 16px;
+            top: 28px;
+            z-index: 10;
+            position: fixed;
+            display: inline-block;
+            height: 42px;
+            width: 42px;
+            line-height: 46px;
+            background-color: #fff;
+            border-radius: 42px;
+        }
+
+        .line {
+            height: 0px;
+            border: 1px solid #111;
+            margin-top: 5px;
+        }
+
+        .navbtn_w {
+            display: inline-block;
+            width: 25px;
+        }
+
+        /* ============================================ */
+        .foot_top {
+            text-align: center;
+            font-family: "STXihei";
+            font-size: 12px;
+            color: #fff;
+            height: 418px;
+            background-color: #222;
+        }
+
+        .foot_buttom {
+            height: 85px;
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            line-height: 85px;
+        }
+
+        .intro {
+
+            margin-top: 132px;
+            display: inline-block;
+        }
+
+        .list {
+            margin-left: 184px;
+            margin-top: 132px;
+            vertical-align: top;
+            display: inline-block;
+        }
+
+        .list .btn {
+            cursor: pointer;
+            margin-top: 24px;
+        }
+
+        .QR_code {
+            margin-left: 147px;
+            margin-top: 132px;
+            text-align: center;
+            vertical-align: top;
+            display: inline-block;
+        }
+
+        .QR_code div {
+            display: inline-block;
+        }
+
+        .QR_code div div {
+            display: block;
+        }
+
+        .QR_code img {
+            margin-bottom: 28px;
+        }
+
+        /* ======================================================== */
+        .bigtitle {
+            text-align: center;
+        }
+
+        .bigtitle_title {
+            font-family: 'MicrosoftYaHeiLight';
+            font-size: 62px;
+            color: #222;
+        }
+
+        .bigtitle_little {
+            font-family: 'MicrosoftYaHeiLight';
+            font-size: 20px;
+            color: #666;
+        }
+
+        .bigtitle_little1 {
+            font-family: 'STXihei';
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* ====================================================== */
+        .listshow {
+            font-family: 'MicrosoftYaHeiLight';
+            font-size: 12px;
+            color: #fff;
+            background-color: #222;
+            text-align: center;
+        }
+
+        .listshow_line {
+            display: inline-block;
+            width: 166px;
+            height: 4px;
+            background-color: #fff;
+        }
+
+        .listshow_list {
+            margin: 0px 20px;
+            text-align: left;
+            vertical-align: top;
+            display: inline-block;
+            width: 380px;
+        }
+
+        .listshow_list span {
+
+            display: block;
+        }
+
+        temp {
+
+            display: inline-block;
+            width: 50px;
+        }
+
+        .listshow_list span :last-child {
+            width: 90px;
+        }
+
+        .listshow_list span :nth-child(3) {
+            width: 110px;
+        }
+
+        .listshow_list span :nth-child(2) {
+            width: 30px;
+        }
+
+        /* ============================================= */
+        .video {
+            text-align: center;
+        }
+
+        .video img {
+            vertical-align: bottom;
+            display: inline-block;
+            width: 888px;
+        }
+
+        .video .video_wrapper {
+            margin-left: 50px;
+            vertical-align: bottom;
+            display: inline-block;
+        }
+
+        .video_title {
+            font-family: 'MicrosoftYaHeiLight';
+            font-size: 32px;
+            color: #666;
+        }
+
+        .video_little {
+            font-family: 'MicrosoftYaHeiLight';
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* =================================================== */
+        .picshow {
+            text-align: center;
+        }
+
+        .picshow_title {
+            font-family: 'MicrosoftYaHeiLight';
+            font-size: 40px;
+            color: #222;
+        }
+
+        .picshow_little {
+            font-family: 'STXihei';
+            font-size: 20px;
+            color: #666;
+        }
+
+        .picshow_dash {
+            display: inline-block;
+            width: 250px;
+            border: 2px #666 dashed;
+        }
+
+        .picshow_bar {
+            left: -100px;
+            position: relative;
+            width: 3500px;
+        }
+
+        .picshow_show {
+            overflow: hidden;
+        }
+
+        .picshow_bar img {
+            margin: 0px 12px;
+            width: 650px;
+            height: 430px;
+        }
+
+        /* ================================================= */
+        .develop {
+            text-align: center;
+        }
+
+        .develop_title {
+            font-family: 'MicrosoftYaHeiLight';
+            font-size: 40px;
+            color: #222;
+        }
+
+        .develop_little {
+            font-family: 'STXihei';
+            font-size: 20px;
+            color: #666;
+        }
+
+        .develop_show {
+            text-align: left;
+        }
+
+        .develop_card {
+            display: inline-block;
+            margin: 0px 50px;
+            width: 1300px;
+            height: 626px;
+            box-shadow: 0px 0px 20px 0px;
+        }
+
+        .develop_card img {
+            width: 802px;
+            height: 553px;
+            vertical-align: bottom;
+            margin-left: 38px;
+        }
+
+        .develop_content {
+            margin-left: 30px;
+            vertical-align: bottom;
+            width: 400px;
+            display: inline-block;
+        }
+
+        .develop_name {
+            font-family: 'MicrosoftYaHeiLight';
+            font-size: 28px;
+            color: #222;
+        }
+
+        .develop_text {
+            font-family: 'MicrosoftYaHeiLight';
+            font-size: 16px;
+            color: #222;
+        }
+
+        .develop_bar {
+            height: 646px;
+            width: 7100px;
+            position: relative;
+        }
+
+        .develop_show {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="navbtn">
+        <span class="navbtn_w">
+
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </span>
+    </span>
+    <div class="head">
+
+        <span class="ico"></span>
+        <div class="nav" style="">
+            <span class="DUYI_chooseButton_underline bt">首页</span>
+            <span class="DUYI_chooseButton_underline bt">课程学习</span>
+            <span class="DUYI_chooseButton_underline bt">学员展示</span>
+            <span class="DUYI_chooseButton_underline bt">关于</span>
+        </div>
+
+    </div>
+    <!-- ======================================================================== -->
+
+
+    <div class="bigtitle">
+        <div style="height:200px;"></div>
+        <span class="bigtitle_title">渡一优秀学员就业榜</span>
+        <div style="height:24px;"></div>
+        <span class="bigtitle_little">在去往高薪的路上&nbsp;&nbsp;他们没有任何犹豫</span>
+        <div style="height:191px;"></div>
+        <span class="bigtitle_little1">Student&nbsp;Employment&nbsp;list</span>
+        <div style="height:52px;"></div>
+    </div>
+
+
+
+
+    <div class="listshow">
+        <div style="height:122px;"></div>
+        <span class="listshow_line"></span>
+        <div style="height:122px;"></div>
+        <div class="listshow_list">
+            <span><temp>刘飞翔</temp>
+                <temp>男</temp>
+                <temp>今日头条</temp>
+                <temp>41+W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>陈志煌</temp>
+                <temp>男</temp>
+                <temp>WAP</temp>
+                <temp>40+W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>张家玮</temp>
+                <temp>女</temp>
+                <temp>今日头条</temp>
+                <temp>30+W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>李敏</temp>
+                <temp>女</temp>
+                <temp>钱站</temp>
+                <temp>28.8W</temp>
+                <temp>燕山大学 </temp></span>
+            <span><temp>杨奇</temp>
+                <temp>男</temp>
+                <temp>钱站</temp>
+                <temp>28.8W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>段然</temp>
+                <temp>男</temp>
+                <temp>滴滴出行</temp>
+                <temp>25.5W</temp>
+                <temp>黑龙江大学</temp></span>
+            <span><temp>安海琴</temp>
+                <temp>女</temp>
+                <temp>滴滴出行</temp>
+                <temp>22.5W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>陈冠潮</temp>
+                <temp>男</temp>
+                <temp>滴滴出行</temp>
+                <temp>22.5W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>丛培森</temp>
+                <temp>男</temp>
+                <temp>美团</temp>
+                <temp>22.5W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>江潮飞</temp>
+                <temp>男</temp>
+                <temp>滴滴出行</temp>
+                <temp>22.5W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>李嘉</temp>
+                <temp>男</temp>
+                <temp>滴滴出行</temp>
+                <temp>22.5W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>王天立</temp>
+                <temp>男</temp>
+                <temp> 美团点评</temp>
+                <temp>22.5W</temp>
+                <temp>黑龙江大学</temp></span>
+            <span><temp>尤硕</temp>
+                <temp>女</temp>
+                <temp>美团</temp>
+                <temp>22.5W</temp>
+                <temp>黑龙江大学</temp></span>
+            <span><temp>于华健</temp>
+                <temp>男</temp>
+                <temp>阿里</temp>
+                <temp>22.5W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>徐健</temp>
+                <temp>男</temp>
+                <temp>阿里巴巴</temp>
+                <temp>22.4W</temp>
+                <temp>黑龙江大学</temp></span>
+            <span><temp>周鑫</temp>
+                <temp>男</temp>
+                <temp>迅雷</temp>
+                <temp>22.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>胡安琪</temp>
+                <temp>女</temp>
+                <temp>知乎</temp>
+                <temp>21.8W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>白嘉硕</temp>
+                <temp>男</temp>
+                <temp>唱吧</temp>
+                <temp>21.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>刘培</temp>
+                <temp>男</temp>
+                <temp>美团 </temp>
+                <temp>21.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>张洋</temp>
+                <temp>女</temp>
+                <temp>ofo共享单车</temp>
+                <temp>21.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>贺子薇</temp>
+                <temp>女</temp>
+                <temp>小米</temp>
+                <temp>20.7W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>邵德奇</temp>
+                <temp>男</temp>
+                <temp>美团点评</temp>
+                <temp>20.5W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>张丽晶</temp>
+                <temp>女</temp>
+                <temp>百度外卖</temp>
+                <temp>20.5W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>谷碧君</temp>
+                <temp>女</temp>
+                <temp>天极传媒</temp>
+                <temp>20.4W</temp>
+                <temp>黑龙江大学</temp></span>
+            <span><temp>王可心</temp>
+                <temp>女</temp>
+                <temp>百度外卖</temp>
+                <temp>20.4W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>刘兆秋</temp>
+                <temp>女</temp>
+                <temp>百度外卖</temp>
+                <temp>20.0W</temp>
+                <temp>黑龙江大学</temp></span>
+            <span><temp>刘兆秋</temp>
+                <temp>女</temp>
+                <temp>百度外卖</temp>
+                <temp>20.0W</temp>
+                <temp>黑龙江大学</temp></span>
+            <span><temp>徐秀峰</temp>
+                <temp>男</temp>
+                <temp>百度</temp>
+                <temp>20.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+        </div>
+        <div class="listshow_list">
+            <span><temp>杨露</temp>
+                <temp>男</temp>
+                <temp>百度</temp>
+                <temp>20.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>于颖</temp>
+                <temp>女</temp>
+                <temp>昆仑万维</temp>
+                <temp>20.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>许馨</temp>
+                <temp>女</temp>
+                <temp>搜狐</temp>
+                <temp>19.8W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>亢明悦</temp>
+                <temp>女</temp>
+                <temp>百度</temp>
+                <temp>19.6W</temp>
+                <temp>黑龙江大学</temp></span>
+            <span><temp>董亚杰</temp>
+                <temp>男</temp>
+                <temp>百度</temp>
+                <temp>19.5W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>王子昂</temp>
+                <temp>男</temp>
+                <temp>滴滴出行</temp>
+                <temp>19.5W</temp>
+                <temp>黑龙江大学</temp></span>
+            <span><temp>李俊峰</temp>
+                <temp>男</temp>
+                <temp>水滴互助</temp>
+                <temp>19.2W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>林思蕾</temp>
+                <temp>女</temp>
+                <temp>微软创新中心</temp>
+                <temp>19.2W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>李金梅</temp>
+                <temp>女</temp>
+                <temp>百度网搜</temp>
+                <temp>19.0W</temp>
+                <temp>黑龙江大学</temp></span>
+            <span><temp>李淑君</temp>
+                <temp>女</temp>
+                <temp>滴滴出行</temp>
+                <temp>19.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>仝腾</temp>
+                <temp>男</temp>
+                <temp>同程旅游</temp>
+                <temp>19.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>张捷</temp>
+                <temp>男</temp>
+                <temp>地平线机器人</temp>
+                <temp>18.5W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>安雷</temp>
+                <temp>男</temp>
+                <temp>便利蜂</temp>
+                <temp>18.2W</temp>
+                <temp>黑龙江大学</temp></span>
+            <span><temp>曹帆</temp>
+                <temp>女</temp>
+                <temp>便利蜂</temp>
+                <temp>18.2W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>关艳</temp>
+                <temp>女</temp>
+                <temp>京东</temp>
+                <temp>18.2W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>郑麗夏</temp>
+                <temp>女</temp>
+                <temp>便利蜂</temp>
+                <temp>18.2W</temp>
+                <temp>黑龙江大学</temp></span>
+            <span><temp>汪强</temp>
+                <temp>男</temp>
+                <temp>滴滴出行</temp>
+                <temp>18.1W</temp>
+                <temp>黑龙江大学</temp></span>
+            <span><temp>范欣欣</temp>
+                <temp>女</temp>
+                <temp>链家</temp>
+                <temp>18.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>韩贵封</temp>
+                <temp>男</temp>
+                <temp>黑湖</temp>
+                <temp>18.0W</temp>
+                <temp>黑龙江大学</temp></span>
+            <span><temp>刘洋</temp>
+                <temp>女</temp>
+                <temp>饿了么</temp>
+                <temp>18.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>柳舒芳</temp>
+                <temp>男</temp>
+                <temp>懂球帝</temp>
+                <temp>18.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>彭堉林</temp>
+                <temp>男</temp>
+                <temp>腾讯应用宝</temp>
+                <temp>18.0W</temp>
+                <temp>东北林业大学</temp></span>
+            <span><temp>王刘迪</temp>
+                <temp>男</temp>
+                <temp>中国电信</temp>
+                <temp>18.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>徐岩</temp>
+                <temp>男</temp>
+                <temp>渡鸦科技</temp>
+                <temp>18.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>范欣欣</temp>
+                <temp>女</temp>
+                <temp>链家</temp>
+                <temp>18.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>李天慈</temp>
+                <temp>女</temp>
+                <temp>金山云网络科技</temp>
+                <temp>17.6W</temp>
+                <temp>黑龙江大学</temp></span>
+            <span><temp>李延磊</temp>
+                <temp>男</temp>
+                <temp>去哪儿网</temp>
+                <temp>17.6W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>王健伊</temp>
+                <temp>男</temp>
+                <temp>杭州浪潮</temp>
+                <temp>17.6W</temp>
+                <temp>黑龙江大学</temp></span>
+        </div>
+        <div class="listshow_list">
+            <span><temp>薛颖颖</temp>
+                <temp>女</temp>
+                <temp>去哪儿网</temp>
+                <temp>17.6W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>李嘉辉</temp>
+                <temp>男</temp>
+                <temp>百度糯米</temp>
+                <temp>17.5W</temp>
+                <temp>东北林业大学</temp></span>
+            <span><temp>夏志尧</temp>
+                <temp>男</temp>
+                <temp>北京百家互联</temp>
+                <temp>17.5W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>王晗</temp>
+                <temp>男</temp>
+                <temp>猎聘网</temp>
+                <temp>17.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>王震</temp>
+                <temp>男</temp>
+                <temp>58同城</temp>
+                <temp>17.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>毕金风</temp>
+                <temp>男</temp>
+                <temp>人人网</temp>
+                <temp>16.8W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>冯睿</temp>
+                <temp>男</temp>
+                <temp>阿里巴巴</temp>
+                <temp>16.8W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>李英奇</temp>
+                <temp>男</temp>
+                <temp>猎聘网</temp>
+                <temp>16.8W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>汪雪珂</temp>
+                <temp>男</temp>
+                <temp>美图公司</temp>
+                <temp>16.8W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>于占超</temp>
+                <temp>男</temp>
+                <temp>好未来</temp>
+                <temp>16.8W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>张程禹</temp>
+                <temp>男</temp>
+                <temp>人人网</temp>
+                <temp>16.8W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>田馨元</temp>
+                <temp>男</temp>
+                <temp>风行</temp>
+                <temp>16.5W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>王唯</temp>
+                <temp>女</temp>
+                <temp> 一起作业网</temp>
+                <temp>16.5W</temp>
+                <temp>黑龙江大学</temp></span>
+            <span><temp>陈田</temp>
+                <temp>女</temp>
+                <temp>百度地图</temp>
+                <temp>16.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>刘立铭</temp>
+                <temp>男</temp>
+                <temp>36氪媒体运营 </temp>
+                <temp>16.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>于婷</temp>
+                <temp>女</temp>
+                <temp>太和音乐</temp>
+                <temp>16.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>纪涛</temp>
+                <temp>男</temp>
+                <temp>北京永洪商智科技</temp>
+                <temp>15.5W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>唐林</temp>
+                <temp>男</temp>
+                <temp>好未来</temp>
+                <temp>15.4W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>韩雪梅</temp>
+                <temp>女</temp>
+                <temp>青牛软件</temp>
+                <temp>15.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>栾鹏</temp>
+                <temp>男</temp>
+                <temp>杉数科技有限公司</temp>
+                <temp>15.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>汪洋</temp>
+                <temp>男</temp>
+                <temp>锐捷网络公司</temp>
+                <temp>13.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>闫冰</temp>
+                <temp>男</temp>
+                <temp>北京首信科技</temp>
+                <temp>13.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>韩冬</temp>
+                <temp>男</temp>
+                <temp>快手 </temp>
+                <temp>10.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>王跃函</temp>
+                <temp>女</temp>
+                <temp>腾讯无线研发中心</temp>
+                <temp>10.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>张彦平</temp>
+                <temp>女</temp>
+                <temp>恒天金服</temp>
+                <temp>10.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span><temp>赵鹏</temp>
+                <temp>男</temp>
+                <temp>蓝曼科技</temp>
+                <temp>10.0W</temp>
+                <temp>哈尔滨理工大学</temp></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div style="height:122px;"></div>
+    </div>
+
+
+
+
+    <div class="video">
+        <div style="height:200px;"></div>
+        <img src="./img/envori/T5.png">
+        <!--<video src="https://video.pearvideo.com/mp4/adshort/20181228/cont-1498554-13417671_adpkg-ad_hd.mp4"></video>-->
+        <div class="video_wrapper" height='575' width='888'>
+            <span class="video_title">渡一与你&nbsp;风雨兼程</span>
+            <div style="height:44px;"></div>
+            <span class="video_little">每个说不想努力的人</span>
+            <div style="height:5px;"></div>
+            <span class="video_little">心里都装着自以为不可能的梦想</span>
+            <div style="height:5px;"></div>
+            <span class="video_little">在渡一我们将梦想照进现实</span>
+            <div style="height:5px;"></div>
+            <span class="video_little">在成长的道路上 ，渡一会始终陪在你的身边</span>
+            <div></div>
+        </div>
+        <div style="height:15px;"></div>
+    </div>
+
+
+    <div class="picshow">
+        <div style="height:200px;"></div>
+        <span class="picshow_title">学习环境</span>
+        <div style="height:24px;"></div>
+        <span class="picshow_dash"></span>
+        <div style="height:23px;"></div>
+        <span class="picshow_little">Campus&nbsp;Environment</span>
+        <div style="height:78px;"></div>
+
+
+        <div class="picshow_show">
+            <div class="picshow_bar">
+                <img src="./img/envori/1.png" alt="">
+                <img src="./img/envori/2.png" alt="">
+                <img src="./img/envori/3.png" alt="">
+                <img src="./img/envori/4.png" alt="">
+                <img src="./img/envori/5.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="develop">
+        <div style="height:178px;"></div>
+        <span class="develop_title">素质拓展活动</span>
+        <div style="height:22px;"></div>
+        <span class="develop_little">Quality&nbsp;developing&nbsp;activities</span>
+        <div style="height:104px;"></div>
+
+
+        <div class="develop_show">
+            <div style="height:20px;"></div>
+            <div class="develop_bar">
+                <div class="develop_card">
+                    <div style="height:46px;"></div>
+                    <img src="./img/envori/T1.png" alt="">
+                    <div class="develop_content">
+                        <span class="develop_name">【包场看电影，我们不一样】</span>
+                        <div style="height:20px;"></div>
+                        <span class="develop_text">看电影这么爽的事，当然要和志同道合的人一起~体贴、团结、有品位、很大气的渡一，神秘包场看电影体质将会无限期延续，来啊，青春就要不一young！</span>
+                    </div>
+                </div>
+                <div class="develop_card">
+                    <div style="height:46px;"></div>
+                    <img src="./img/envori/T2.png" alt="">
+                    <div class="develop_content">
+                        <span class="develop_name">【渡一文化节】</span>
+                        <div style="height:20px;"></div>
+                        <span class="develop_text">在这里，我们共同享受“文化互联”的冲击，也共同感受“激荡飞扬”的青春，在追忆似水的日子里，共同走过，不负韶华</span>
+                    </div>
+                </div>
+                <div class="develop_card">
+                    <div style="height:46px;"></div>
+                    <img src="./img/envori/T3.png" alt="">
+                    <div class="develop_content">
+                        <span class="develop_name">【渡一篮球赛，了解一下】</span>
+                        <div style="height:20px;"></div>
+                        <span class="develop_text">时间带来了磨练，毅力带来了考验。成长路上不仅要有一腔奋不顾身的孤勇，还需要三五知己的扶持相助，这不只是球场，也是赛场，青春不止，热血还燃，为了更好的明天，你的知识和体魄都准备好了吗？</span>
+                    </div>
+                </div>
+                <div class="develop_card">
+                    <div style="height:46px;"></div>
+                    <img src="./img/envori/T4.png" alt="">
+                    <div class="develop_content">
+                        <span class="develop_name">【奔跑吧，小鲜肉们】</span>
+                        <div style="height:20px;"></div>
+                        <span class="develop_text">在渡一，我们曾经并肩作战，挥洒出了青春中最热血的模样，在渡一，我们曾经风雨共担，泼墨挥毫间战胜了不够坚定的自己，未来的路还很长，我们一起奔跑吧，小鲜肉们~</span>
+                    </div>
+                </div>
+                <div class="develop_card">
+                    <div style="height:46px;"></div>
+                    <img src="./img/envori/T5.png" alt="">
+                    <div class="develop_content">
+                        <span class="develop_name">【2017年会 新起点 新跨越】</span>
+                        <div style="height:20px;"></div>
+                        <span class="develop_text">基本不严肃，处处有温馨的渡一年会，在这里，谁也搞不懂闲聊的跳跃是如何起承转合的，谁也不知道下一个冒出来的节目和话题是什么，这些看似无用的交流更显得闲适舒服，有知识点，有笑点，当然还有新起点~</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="height:200px;"></div>
+
+
+
+    <!-- ====================================================================== -->
+    <div class="foot">
+        <div class="foot_top">
+            <div class="intro">
+                <div>DUYI&nbsp;CULTURE</div>
+                <div style="margin-top:31px;">育人为渡，经久如一<br> 我们不会辜负时代赋予我们的历史性机遇，为构建技术
+                    <br> 互联网的超科技时代，一往无前。在渡一，愿我们拥有
+                    <br> 更多可能，也期待你们脚下有风，各自灿烂。
+                </div>
+            </div>
+
+            <div class="list">
+                <div class="btn" style="margin-top:0px;">CATEGORIES</div>
+                <div class="btn">About</div>
+                <div class="btn">Forum</div>
+                <div class="btn">Service</div>
+                <div class="btn">Porlfolio</div>
+                <div class="btn">Contact</div>
+            </div>
+
+            <div class="QR_code">
+                <div>
+                    <img src="./img/公众号二维码.png" alt="">
+                    <div></div>
+                    <span>渡一官方公众号</span>
+                </div>
+                <div style="margin-left:95px;">
+                    <img src="./img/小渡微信二维码.png" alt="">
+                    <div></div>
+                    <span>小渡智能咨询</span>
+                </div>
+            </div>
+        </div>
+        <div class="foot_buttom">Copyright&nbsp;2018&nbsp;DUYI&nbsp;EDUCATION&nbsp;Version&nbsp;1.0.0</div>
+    </div>
+
+    <script src="./src/general.js"></script>
+
+
+    <script>
+        var imgs = document.getElementsByTagName('img');
+        for (var i = 0; i < imgs.length; i++) {
+            imgs[i].ondragstart = function () { return false; };
+        }
+        var topic = { bar: document.getElementsByClassName('picshow_bar')[0], now: -100 }
+        topic.bar.onmousedown = function (e) {
+            var start = e.screenX;
+            topic.bar.onmousemove = function (e1) {
+                if ((topic.now < 0 && (start - e1.screenX) < 0) || (topic.bar.offsetWidth + topic.now > document.body.offsetWidth && (start - e1.screenX) >= 0)) {
+                    topic.now = topic.now - (start - e1.screenX);
+                    topic.bar.style.left = topic.now + 'px';
+                    start = e1.screenX;
+                }
+            }
+            topic.bar.onmouseup = function (e1) {
+                topic.bar.onmousemove = function () { }
+            }
+        }
+        topic.bar.onwheel = function (e) {
+            if ((topic.now < 0 && (e.deltaX) < 0) || (topic.bar.offsetWidth + topic.now > document.body.offsetWidth && (e.deltaX) >= 0)) {
+                topic.now = topic.now - (e.deltaX);
+                topic.bar.style.left = topic.now + 'px';
+            }
+        }
+
+
+        var courser = { bar: document.getElementsByClassName('develop_bar')[0], now: -100 }
+        courser.bar.onmousedown = function (e) {
+            var start = e.screenX;
+            courser.bar.onmousemove = function (e1) {
+                if ((courser.now < 0 && (start - e1.screenX) < 0) || (courser.bar.offsetWidth + courser.now > document.body.offsetWidth && (start - e1.screenX) >= 0)) {
+                    courser.now = courser.now - (start - e1.screenX);
+                    courser.bar.style.left = courser.now + 'px';
+                    start = e1.screenX;
+                }
+            }
+            courser.bar.onmouseup = function (e1) {
+                courser.bar.onmousemove = function () { }
+            }
+        }
+        courser.bar.onwheel = function (e) {
+            if ((courser.now < 0 && (e.deltaX) < 0) || (courser.bar.offsetWidth + courser.now > document.body.offsetWidth && (e.deltaX) >= 0)) {
+                courser.now = courser.now - (e.deltaX);
+                courser.bar.style.left = courser.now + 'px';
+            }
+        }
+    </script>
+</body>
+
+</html>

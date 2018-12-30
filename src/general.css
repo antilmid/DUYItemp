@@ -1,0 +1,54 @@
+body{
+    min-width: 1300px;
+    margin: 0px;
+    padding: 0px;
+}
+*{
+    moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -o-user-select:none;
+    -khtml-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    }
+/* ============================================================================ */
+/* 渡一响应式选择按钮  下划线型 */
+.DUYI_chooseButton_underline {
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    display: inline-block;
+    font-family: "MicrosoftYaHei";
+    font-size: 14px;
+    height: 38px;
+    width: 116px;
+    line-height: 38px;
+    text-align: center;
+    color: #fff;
+    background: #222;
+    background: linear-gradient(to right, #fff 0%, #222 0%);
+    cursor: pointer;
+    vertical-align: bottom;
+}
+.DUYI_chooseButton_underline::after{
+    transition:width 1s;
+    display: block;
+    content: "1";
+    height: 0px;
+    overflow: hidden;
+    border-bottom: 2px solid;
+    width: 0%;
+}
+.DUYI_chooseButton_underline:hover::after{
+    transition:width 1s;
+    width: 100%;
+}
+.head {
+    min-width: 1300px;
+    z-index: 100;
+}
+.foot{
+    min-width: 1300px;
+}

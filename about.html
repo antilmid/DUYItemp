@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./img/logo.ico" type="image/x-icon">
+    <title>关于我们</title>
+    <link rel="stylesheet" href="./src/general.css">
+    <style>
+        .head {
+            width: 100%;
+            height: 110px;
+            background-color: #222;
+            position: fixed;
+        }
+
+        .ico {
+            position: relative;
+            vertical-align: top;
+            margin-left: 381px;
+            margin-top: 34px;
+            display: inline-block;
+            height: 42px;
+            width: 38px;
+            background-image: url("./img/logo.png");
+        }
+
+        .nav {
+            margin-right: 110px;
+            float: right;
+            display: inline-block;
+            height: 38px;
+            line-height: 0px;
+        }
+
+        .bt {
+            height: 104px;
+            line-height: 104px;
+            position: relative;
+        }
+
+        .navbtn {
+            cursor: pointer;
+            text-align: center;
+            opacity: 0;
+            left: 16px;
+            top: 28px;
+            z-index: 10;
+            position: fixed;
+            display: inline-block;
+            height: 42px;
+            width: 42px;
+            line-height: 46px;
+            background-color: #fff;
+            border-radius: 42px;
+        }
+
+        .line {
+            height: 0px;
+            border: 1px solid #111;
+            margin-top: 5px;
+        }
+
+        .navbtn_w {
+            display: inline-block;
+            width: 25px;
+        }
+
+        /* ============================================ */
+        .foot_top {
+            text-align: center;
+            font-family: "STXihei";
+            font-size: 12px;
+            color: #fff;
+            height: 418px;
+            background-color: #222;
+        }
+
+        .foot_buttom {
+            height: 85px;
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            line-height: 85px;
+        }
+
+        .intro {
+
+            margin-top: 132px;
+            display: inline-block;
+        }
+
+        .list {
+            margin-left: 184px;
+            margin-top: 132px;
+            vertical-align: top;
+            display: inline-block;
+        }
+
+        .list .btn {
+            cursor: pointer;
+            margin-top: 24px;
+        }
+
+        .QR_code {
+            margin-left: 147px;
+            margin-top: 132px;
+            text-align: center;
+            vertical-align: top;
+            display: inline-block;
+        }
+
+        .QR_code div {
+            display: inline-block;
+        }
+
+        .QR_code div div {
+            display: block;
+        }
+
+        .QR_code img {
+            margin-bottom: 28px;
+        }
+        /* ================================== */
+        .t1{
+            text-align: center;
+        }
+        .t1_title{
+            font-family: 'MicrosoftYaHeiLight';
+            color:#222;
+            font-size: 60px;
+        }
+        .t1_little{
+            font-family: 'MicrosoftYaHeiLight';
+            color:#666;
+            font-size: 20px;
+        }
+        .t1 img{
+            vertical-align: top;
+            width: 300px;
+            height: 680px;
+        }
+        .t1_culum{
+            text-align: left;
+            padding: 0px 50px;
+            vertical-align: top;
+            display: inline-block;
+            width: 200px;
+            height: 680px;
+            background-color: #fafafa;
+        }
+        .t1_name{
+            font-family: 'STXihei';
+            color:#222;
+            font-size: 32px;
+        }
+        .t1_p1{
+            font-family: 'MicrosoftYaHeiLight';
+            color:#666;
+            font-size: 14px;
+        }
+        .t1_p2{
+            font-family: 'MicrosoftYaHeiLight';
+            color:#666;
+            font-size: 14px;
+        }
+        .t2{
+            height: 600px;
+            background: #eee;
+        }
+        .t2{
+            text-align: center;
+        }
+        .t2 img{
+            height: 855px;
+            width: 570px;
+            position: relative;
+            top:-200px;
+        }
+        .t2_content{
+            text-align: left;
+            margin-left: 111px;
+            margin-top: 156px;
+            vertical-align: top;
+            width: 500px;
+            display: inline-block;
+        }
+        .t2_name{
+            font-family: 'MicrosoftYaHeiLight';
+            color:#222;
+            font-size: 24px;
+        }
+        .t2_text{
+            font-family: 'MicrosoftYaHeiLight';
+            color:#666;
+            font-size: 16px;
+        }
+        /* =========================================== */
+        .map{
+            text-align: center;
+            
+        }
+        .map_head{
+            background-image: url('./img/about/back.png');
+            display: inline-block;
+            width: 1170px;
+            height: 700px;
+        }
+        .map_head_title{
+            font-family: 'STXihei';
+            color:#fff;
+            font-size: 60px;
+        }
+        .map_head_little{
+            font-family: 'MicrosoftYaHeiLight';
+            color:#fff;
+            font-size: 20px;
+        }
+        .map_head_card{
+            margin:0px  130px;
+            vertical-align: top;
+            text-align: left;
+            padding: 0px 34px;
+            border: 4px #fff solid;
+            display: inline-block;
+            width: 183px;
+            height: 314px;
+            font-family: 'MicrosoftYaHeiLight';
+            color:#fff;
+            font-size: 13px;
+        }
+        .map_head_name{
+            font-size: 18px;
+        }
+        .map_text{
+            display: inline-block;
+            width: 1168px;
+            text-align: center;
+            height: 62px;
+            font-family: 'STXihei';
+            font-size: 20px;
+            line-height: 62px;
+            border-left: 1px #ddd solid;
+            border-right: 1px #ddd solid;
+        }
+        .map_foot{
+            display: inline-block;
+            background-color: #f7f7f7;
+            width: 1168px;
+            border: 1px #ddd solid;
+        }
+        .map_foot img{
+            height: 327px;
+            width: 1110px;
+        }
+        .map_foot_text{
+            font-family: 'MicrosoftYaHeiLight';
+            color:#222;
+            font-size: 12px;
+            margin: 0px 29px;
+            text-align: left;
+        }
+        .map_foot_right{
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="navbtn">
+        <span class="navbtn_w">
+
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </span>
+    </span>
+    <div class="head">
+
+        <span class="ico"></span>
+        <div class="nav">
+            <span class="DUYI_chooseButton_underline bt">首页</span>
+            <span class="DUYI_chooseButton_underline bt">课程学习</span>
+            <span class="DUYI_chooseButton_underline bt">学员展示</span>
+            <span class="DUYI_chooseButton_underline bt">关于</span>
+        </div>
+
+    </div>
+    <!-- ======================================================================== -->
+
+
+    <div class="t1">
+        <div style="height:200px"></div>
+        <span class="t1_title">渡一教育</span>
+        <div style="height:31px"></div>
+        <span class="t1_little">渡一的初衷是为了能让每一位学员对于人生做好充足的准备，以更好的姿态成功入职高薪企业。<br>创造价值&nbsp;用心服务&nbsp;保障学员&nbsp;持久发展
+        </span>
+        <div style="height:55px"></div>
+        <div></div>
+        <span class="t1_culum">
+                <div style="height:120px"></div>
+                <span class="t1_name">About</span>
+                <div style="height:60px"></div>
+                <span class="t1_p1">公司于2009年启动互联网技术人才培养计划，目前培养的互联网技术人才已遍布全国及部分海外地区，是国内较早开设培养专业web前端技术人才的科技企业。</span>
+                <div style="height:67px"></div>
+                <span class="t1_p2">历经多年的市场累积，渡一独创“引导式教学”+“点对点教学服务”+“关卡制审核”系统，从而确保每位学员能在指定的培训周期中高质量的完成学习任务。</span>
+        </span><img src="./img/about/sarah-dorweiler-127187.png" alt=""><span class="t1_culum">
+                <div style="height:120px"></div>
+                <span class="t1_name">Unique</span>
+                <div style="height:60px"></div>
+                <span class="t1_p1">国内唯一“连续三年培养出年薪超过40W就业学员”的教育机构</span>
+                <div style="height:67px"></div>
+                <span class="t1_p2">国内唯一连续38个月，实现100%就业率，且学员年薪均过10W的教育机构</span>
+                <div style="height:67px"></div>
+                <span class="t1_p2">国内唯一可以和学员签订就业协议，就业年薪不足10W，全额退费的教育机构</span>
+        </span><img src="./img/about/图片2.png" alt="">
+    </div>
+
+
+
+
+    <div style="height:400px"></div>
+    <div class="t2">
+        <img src="./img/about/samuel-zeller-103103.png" alt="">
+        <div class="t2_content">
+            <span class="t2_name">总想给你最好的</span>
+            <div style="height:36px"></div>
+            <span class="t2_text">如果一个同学来到了渡一，走时只带走了技能，我们就不算成功。
+                    在渡一，你不仅可以学到技术，更能提升个人修养，更加透彻的了解世界，进一步寻求自己的光荣和梦想。
+                    <br>
+                    虽然，光荣并不容易抵达。但，希望通过我们的努力，能帮你少走些弯路。在未来的人生轨迹中更快更好的找到属于自己的生活方式，这或许就是我们送给你最珍贵的礼物。
+            </span>
+
+
+        </div>
+    </div>
+
+    <div style="height:267px"></div>
+
+
+    <div class="map">
+        <div class="map_head">
+                <div style="height:102px"></div>
+            <span class="map_head_title">JOIN&nbsp;US</span>
+            <div style="height:28px"></div>
+            <span class="map_head_little">热爱技术&nbsp;热爱分享</span>
+            <div style="height:68px"></div>
+            <div class="map_head_card">
+                    <div style="height:30px"></div>
+                <span class="map_head_name">web前端高级讲师</span>
+                <div style="height:10px"></div>
+                <span>岗位要求</span>
+                <div style="height:17px"></div>
+                <span class="text">
+                    1. 熟练使用HTML，CSS，JavaScript、jQuery应用和web开发。
+                    <br>2. 有CSS3、HTML5，GITHUB等前端实践经验，了解react ,redux ,vue, vuex, angularJS 一种
+                    <br>3. 会使用至少一种前端自动化构建工具webpack，fis，gulp等。
+                </span>
+            </div>
+
+
+
+            <div class="map_head_card">
+                    <div style="height:30px"></div>
+                <span class="map_head_name">JavaScript高级讲师</span>
+                <div style="height:10px"></div>
+                <span>岗位要求</span>
+                <div style="height:17px"></div>
+                <span class="text">
+                        1. 精通JavaScript，对html5有深入的研究，并具有基于html5的平台框架和工具等方面的开发经验；
+                        <br>2. 精通JQuery，JQuery Moblile，具有一定的渲染和控件编程经验；
+                        <br>3. 精通css3，css2，熟练解决各种浏览器的兼容问题；
+                        
+                </span>
+            </div>
+        </div>
+        <div class="map_text">We&nbsp;are&nbsp;here</div>
+        <div class="map_foot">
+                <div style="height:23px"></div>
+            <img src="./img/map.png" alt="">
+            <div style="height:39px"></div>
+            <div class="map_foot_text">
+                <span class="map_foot_left">地址：黑龙江哈尔滨南岗区金爵万象-三期-3号楼1612室</span>
+                <span class="map_foot_right">电话：400-678-6077</span>
+            </div>
+            <div style="height:39px"></div>
+        </div>
+    </div>
+
+    <div style="height:200px"></div>
+    <!-- ====================================================================== -->
+    <div class="foot">
+        <div class="foot_top">
+            <div class="intro">
+                <div>DUYI&nbsp;CULTURE</div>
+                <div style="margin-top:31px;">育人为渡，经久如一<br> 我们不会辜负时代赋予我们的历史性机遇，为构建技术
+                    <br> 互联网的超科技时代，一往无前。在渡一，愿我们拥有
+                    <br> 更多可能，也期待你们脚下有风，各自灿烂。
+                </div>
+            </div>
+
+            <div class="list">
+                <div class="btn" style="margin-top:0px;">CATEGORIES</div>
+                <div class="btn">About</div>
+                <div class="btn">Forum</div>
+                <div class="btn">Service</div>
+                <div class="btn">Porlfolio</div>
+                <div class="btn">Contact</div>
+            </div>
+
+            <div class="QR_code">
+                <div>
+                    <img src="./img/公众号二维码.png" alt="">
+                    <div></div>
+                    <span>渡一官方公众号</span>
+                </div>
+                <div style="margin-left:95px;">
+                    <img src="./img/小渡微信二维码.png" alt="">
+                    <div></div>
+                    <span>小渡智能咨询</span>
+                </div>
+            </div>
+        </div>
+        <div class="foot_buttom">Copyright&nbsp;2018&nbsp;DUYI&nbsp;EDUCATION&nbsp;Version&nbsp;1.0.0</div>
+    </div>
+
+    <script src="./src/general.js"></script>
+</body>
+
+</html>
